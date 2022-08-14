@@ -1,6 +1,7 @@
 package net.kal.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.kal.tutorialmod.block.ModBlocks;
 import net.kal.tutorialmod.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,7 +24,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
