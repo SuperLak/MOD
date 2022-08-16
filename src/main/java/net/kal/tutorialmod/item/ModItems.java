@@ -3,6 +3,7 @@ package net.kal.tutorialmod.item;
 import net.kal.tutorialmod.TutorialMod;
 import net.kal.tutorialmod.item.custom.EightBallItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +19,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> ZIRCON_SWORD = ITEMS.register("zircon_sword",
+            () -> new SwordItem(ModTiers.ZIRCON, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
