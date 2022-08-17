@@ -1,8 +1,11 @@
 package net.kal.tutorialmod.item;
 
 import net.kal.tutorialmod.TutorialMod;
+import net.kal.tutorialmod.block.ModBlocks;
 import net.kal.tutorialmod.item.custom.EightBallItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
