@@ -3,6 +3,9 @@ package net.kal.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.kal.tutorialmod.block.ModBlocks;
 import net.kal.tutorialmod.item.ModItems;
+import net.kal.tutorialmod.painting.ModPaintings;
+import net.kal.tutorialmod.world.feature.ModConfiguredFeatures;
+import net.kal.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,6 +26,11 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
