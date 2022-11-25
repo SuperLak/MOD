@@ -1,10 +1,6 @@
 package net.kal.tutorialmod;
 
 import com.mojang.logging.LogUtils;
-import net.kal.tutorialmod.block.ModBlocks;
-import net.kal.tutorialmod.item.ModItems;
-import net.kal.tutorialmod.painting.ModPaintings;
-import net.kal.tutorialmod.world.feature.ModConfiguredFeatures;
 import net.kal.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,12 +20,7 @@ public class TutorialMod
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
 
-        ModPaintings.register(modEventBus);
-
-        ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -38,9 +29,8 @@ public class TutorialMod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup cod
-    }
 
+    }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
